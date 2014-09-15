@@ -1,5 +1,6 @@
 package org.koenighotze.docuploadws;
 
+import org.apache.commons.codec.binary.Base64;
 import org.koenighotze.docuservice.GetDocumentRequest;
 import org.koenighotze.docuservice.GetDocumentResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ public class DocumentServiceEndpoint {
 
 	@Autowired
 	private DocumentRespository documentRespository;
-
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getDocumentRequest")
 	@ResponsePayload
@@ -24,7 +24,7 @@ public class DocumentServiceEndpoint {
 				.getName());
 		GetDocumentResponse response = new GetDocumentResponse();
 		if (null != document) {
-			response.setBase64Content("empty");//Base64.encodeBase64String(document.getDocumentAsBytes()));
+			response.setBase64Content(Base64.encodeBase64String(document.getDocumentAsBytes()));
 			response.setDescription(document.getDescription());
 			response.setId(document.getName());
 			response.setMimeType(document.getMimeType());

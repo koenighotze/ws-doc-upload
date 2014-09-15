@@ -25,17 +25,17 @@ public class WebServiceConfiguration extends WsConfigurerAdapter {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
-		return new ServletRegistrationBean(servlet, "/service/*");
+		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
 
-	@Bean(name = "document")
+	@Bean(name = "documents")
 	public DefaultWsdl11Definition defaultWsdl11Definition(
 			XsdSchema documentSchema) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName(PORT_NAME);
-		wsdl11Definition.setLocationUri(LOCATION_URI);
+		wsdl11Definition.setPortTypeName("DocumentsPort");
+		wsdl11Definition.setLocationUri("/ws");
 		wsdl11Definition
-				.setTargetNamespace(NAMESPACE_URI);
+				.setTargetNamespace("http://koenighotze.org/docuservice");
 		wsdl11Definition.setSchema(documentSchema);
 		return wsdl11Definition;
 	}

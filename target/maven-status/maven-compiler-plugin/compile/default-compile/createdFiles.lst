@@ -1,8 +1,0 @@
-org/koenighotze/docuservice/GetDocumentResponse.class
-org/koenighotze/docuploadws/DocumentRespository.class
-org/koenighotze/docuploadws/config/DocumentRepositoryConfiguration.class
-org/koenighotze/docuservice/GetDocumentRequest.class
-org/koenighotze/docuploadws/DocumentElem.class
-org/koenighotze/docuploadws/DocumentServiceEndpoint.class
-org/koenighotze/docuservice/ObjectFactory.class
-org/koenighotze/docuservice/package-info.class

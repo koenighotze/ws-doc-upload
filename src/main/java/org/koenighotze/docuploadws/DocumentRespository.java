@@ -11,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 /**
@@ -21,16 +22,17 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class DocumentRespository {
-
+	private static final Logger LOGGER = Logger.getLogger(DocumentRespository.class); 
 	private static final Map<String, DocumentElem> STORE = new ConcurrentHashMap<>();
 
 	@PostConstruct
 	public void init() throws URISyntaxException, IOException {
 		for (String name : Arrays.asList("CopyofHECTORGRAEME.pdf",
 				"HECTORGRAEME.pdf")) {
-			URI uri = DocumentRespository.class.getResource(name).toURI();
-			byte[] bytes = Files.readAllBytes(Paths.get(uri));
-
+			LOGGER.info("Storing document " + name);
+//			URI uri = DocumentRespository.class.getResource(name).toURI();
+//			byte[] bytes = Files.readAllBytes(Paths.get(uri));
+			byte[] bytes = "foo".getBytes();
 			DocumentRespository.STORE.put(name, new DocumentElem(name, bytes,
 					"text/pdf"));
 		}
