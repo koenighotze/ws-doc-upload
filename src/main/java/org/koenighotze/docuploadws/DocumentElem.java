@@ -5,6 +5,15 @@ public class DocumentElem {
 	private String name;
 	private byte[] bytes;
 	private String description = "";
+	private String id;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public DocumentElem(String name, byte[] bytes, String mimeType) {
 		this.name = name;
@@ -20,7 +29,7 @@ public class DocumentElem {
 
 	@Override
 	public String toString() {
-		return String.format("Name: %s, MimeType: %s, Size: %d", this.name, this.mimeType, this.bytes.length);
+		return String.format("Id: %s, Name: %s, MimeType: %s, Size: %d", this.id, this.name, this.mimeType, this.bytes.length);
 	}
 	
 	public String getName() {
@@ -37,5 +46,10 @@ public class DocumentElem {
 
 	public byte[] getDocumentAsBytes() {
 		return this.bytes.clone();
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+		
 	}
 }
