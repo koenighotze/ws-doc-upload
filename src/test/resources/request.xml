@@ -1,8 +1,9 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:doc="http://koenighotze.org/docuservice">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <doc:getDocumentRequest>
-         <doc:name>CopyofHECTORGRAEME.pdf</doc:name>
-      </doc:getDocumentRequest>
-   </soapenv:Body>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:doc="http://koenighotze.org/docuservice">
+	<soapenv:Header />
+	<soapenv:Body>
+		<doc:getDocumentRequest>
+			<doc:name>CopyofHECTORGRAEME.pdf</doc:name>
+		</doc:getDocumentRequest>
+	</soapenv:Body>
 </soapenv:Envelope>

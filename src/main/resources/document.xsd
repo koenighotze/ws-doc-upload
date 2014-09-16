@@ -1,5 +1,5 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:tns="http://koenighotze.org/docuservice" targetNamespace="http://koenighotze.org/docuservice"
+    xmlns:tns="http://org.koenighotze/docupload/documents" targetNamespace="http://org.koenighotze/docupload/documents"
     elementFormDefault="qualified">
 
     <xs:element name="getDocumentRequest">
