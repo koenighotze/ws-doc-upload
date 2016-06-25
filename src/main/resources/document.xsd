@@ -1,11 +1,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:tns="http://koenighotze.org/docuservice" targetNamespace="http://koenighotze.org/docuservice"
-    elementFormDefault="qualified">
+           targetNamespace="http://koenighotze.org/docuservice"
+           elementFormDefault="qualified">
 
     <xs:element name="getDocumentRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:string" />
+                <xs:element name="id" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -13,36 +13,36 @@
     <xs:element name="getDocumentResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:string" />
-                <xs:element name="name" type="xs:string" />
+                <xs:element name="id" type="xs:string"/>
+                <xs:element name="name" type="xs:string"/>
                 <xs:element minOccurs="1" name="base64Content"
-                    type="xs:string" />
+                            type="xs:string"/>
                 <xs:element minOccurs="0" maxOccurs="1"
-                    name="mimeType" type="xs:string" />
+                            name="mimeType" type="xs:string"/>
                 <xs:element minOccurs="0" maxOccurs="1"
-                    name="description" type="xs:string" />
+                            name="description" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:element name="storeDocumentRequest">
         <xs:complexType>
-            <xs:sequence>        
-                <xs:element name="name" type="xs:string" />         
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
                 <xs:element minOccurs="1" name="base64Content"
-                    type="xs:string" />
+                            type="xs:string"/>
                 <xs:element minOccurs="0" maxOccurs="1"
-                    name="mimeType" type="xs:string" />
+                            name="mimeType" type="xs:string"/>
                 <xs:element minOccurs="0" maxOccurs="1"
-                    name="description" type="xs:string" />
+                            name="description" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:element name="storeDocumentResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:string" />            
+                <xs:element name="id" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

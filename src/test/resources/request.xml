@@ -2,7 +2,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <doc:getDocumentRequest>
-         <doc:name>CopyofHECTORGRAEME.pdf</doc:name>
+         <doc:id>CopyofHECTORGRAEME.pdf</doc:id>
       </doc:getDocumentRequest>
    </soapenv:Body>
 </soapenv:Envelope>
